@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- 最小 SRDF：规划组与末端定义。
+     自碰撞矩阵（ACM）请用 MoveIt Setup Assistant 重新生成后合并。 -->
+<robot name="R1_Robotic_Arm">
+  <group name="arm">
+    <chain base_link="base_link" tip_link="tool0"/>
+  </group>
+  <group_state name="zero" group="arm">
+    <joint name="J1" value="0"/>
+    <joint name="J2" value="0"/>
+    <joint name="J3" value="0"/>
+    <joint name="J4" value="0"/>
+    <joint name="J5" value="0"/>
+    <joint name="J6" value="0"/>
+    <joint name="J7" value="0"/>
+  </group_state>
+</robot>

@@ -1,0 +1,37 @@
+# 名义执行器参数（按官方三档电机分组）。
+# 数值均为占位符，来源应为系统辨识（SysID），勿凭经验填写后直接使用。
+# reflected_inertia = motor_inertia * gear_ratio^2
+actuator_groups:
+  shoulder:
+    motor: "6010"
+    joints: [J1, J2]
+    gear_ratio: null          # 待确认
+    rated_torque: null        # N·m，电机侧
+    motor_inertia: null       # kg·m²，电机转子
+    damping: null             # N·m·s/rad，关节侧，SysID
+    coulomb_friction: null    # N·m，关节侧，SysID
+    kt: null                  # N·m/A，SysID
+    gearbox_efficiency: null  # 0-1，SysID
+  arm_mid:
+    motor: "6014"
+    joints: [J3, J4, J5]
+    gear_ratio: null
+    rated_torque: null
+    motor_inertia: null
+    damping: null
+    coulomb_friction: null
+    kt: null
+    gearbox_efficiency: null
+  wrist:
+    motor: "5010"
+    joints: [J6, J7]
+    gear_ratio: null
+    rated_torque: null
+    motor_inertia: null
+    damping: null
+    coulomb_friction: null
+    kt: null
+    gearbox_efficiency: null
+
+# 控制链路延迟（下发到执行的往返），Sim2Real 需在仿真中建模
+control_latency_s: null     # 典型 0.005-0.020，实测
